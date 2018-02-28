@@ -50,7 +50,7 @@ test()
 print (a, b)
 '''
 
-
+'''
 from random import *
 
 def jeu():
@@ -58,15 +58,40 @@ def jeu():
 	print ("devinez le nombre entre 0 et 100")
 	print ("Entrer un nombre : ")
 	nombre = int (input())        
-while (nombre != mystere):  
-	if (nombre < mystere):
-		print ("trop petit")  
-	else:
-		print ("trop grand")     
-    print "Entrez un nombre : "
-    nombre = int (input())
-
+	while (nombre != mystere):  
+		if (nombre < mystere):
+			print ("trop petit")  
+		else:
+			print ("trop grand")     
+    		nombre = int (input())
 print ("Bravo vous avez trouvé le bon numero ")
 
 
 jeu()
+'''
+
+'''
+class Voiture:
+	def __init__(self):
+		self.nom = "Ferrari"
+		self.origine = "Italie"
+
+ma_voiture = Voiture()
+print (ma_voiture.nom)
+print (ma_voiture.origine)
+'''
+
+'''
+import socket
+
+ip = socket.gethostbyname(socket.gethostname())
+print (ip)
+'''
+
+import os
+subnet = "10.94.45." 
+for i in range(1, 255):
+    hostname = subnet + str(i)
+    response = os.system("ping -n 1 " + hostname)
+    if response == 0:
+    	print(hostname, 'is up!')
